@@ -6,4 +6,33 @@ html, body {
 #container {
     height: 100%;
     background-color: aqua;
+    overflow: auto;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.button {
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+    margin: 1rem;
+    display: inline-block;
+    border:solid black 1px;
+    position: relative;
+    top: 40%;
+}
+
+.text-content {
+    position: relative;
+    top: 25%;
+    text-align: center;
+}
+
+.button:hover {
+    background-color: bisque;
+    transform: rotate(5deg);
+}
+
+.button:active{
+    scale: 1.4;
 }
