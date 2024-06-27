@@ -25,7 +25,12 @@ const buttonsArray = [...buttons]
         document.addEventListener('keydown', function(event){
             const buttonLetter = button.getElementsByTagName('p').item(0).innerText.toLowerCase();
             if(event.key ===  buttonLetter){
+                button.classList.add('activeButton');
                 loadWaveLogic(beat);
             }
         })
+
+        document.addEventListener('keyup', function(event){
+            button.classList.remove('activeButton');  
+        });
     });

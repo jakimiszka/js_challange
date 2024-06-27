@@ -36,3 +36,9 @@ html, body {
 .button:active{
     scale: 1.4;
 }
+
+.activeButton{
+    background-color: bisque;
+    transform: rotate(5deg);
+    scale: 1.4;
+}
