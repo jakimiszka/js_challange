@@ -1,14 +1,20 @@
 const buttons = document.getElementsByClassName('button');
-
-let beat = new Audio('./assets/boom.wav');
+const wavesPathsArray = [
+    './assets/boom.wav',
+    './assets/clap.wav',
+    './assets/hihat.wav',
+    './assets/kick.wav',
+    './assets/openhat.wav',
+    './assets/ride.wav',
+    './assets/snare.wav',
+    './assets/tink.wav',
+    './assets/tom.wav'
+];
 
 const buttonsArray = [...buttons]
-    .map((button) => {
+    .map((button, idx) => {
         button.onclick = () => {
-            console.log(button.innerHTML + ' clicked!');
-            
-            // button press eeds some delay/loop action
-            // each button different sound
-            beat.play();
+            const beat = new Audio(wavesPathsArray[idx]);
+            beat.paused ? beat.play() : beat.currentTime = 0;
         }
 });
