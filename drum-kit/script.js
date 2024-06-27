@@ -11,10 +11,21 @@ const wavesPathsArray = [
     './assets/tom.wav'
 ];
 
+const loadWaveLogic = (beat) => {
+    beat.paused ? beat.play() : beat.currentTime = 0;
+}
+
 const buttonsArray = [...buttons]
     .map((button, idx) => {
-        button.onclick = () => {
-            const beat = new Audio(wavesPathsArray[idx]);
-            beat.paused ? beat.play() : beat.currentTime = 0;
+        const beat = new Audio(wavesPathsArray[idx]);
+        button.onclick = (beat) => {
+            loadWaveLogic(beat);
         }
-});
+
+        document.addEventListener('keydown', function(event){
+            const buttonLetter = button.getElementsByTagName('p').item(0).innerText.toLowerCase();
+            if(event.key ===  buttonLetter){
+                loadWaveLogic(beat);
+            }
+        })
+    });
