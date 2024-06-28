@@ -1,15 +1,4 @@
 const buttons = document.getElementsByClassName('button');
-const wavesPathsArray = [
-    './assets/boom.wav',
-    './assets/clap.wav',
-    './assets/hihat.wav',
-    './assets/kick.wav',
-    './assets/openhat.wav',
-    './assets/ride.wav',
-    './assets/snare.wav',
-    './assets/tink.wav',
-    './assets/tom.wav'
-];
 
 const loadWaveLogic = (beat) => {
     beat.paused ? beat.play() : beat.currentTime = 0;
@@ -17,8 +6,9 @@ const loadWaveLogic = (beat) => {
 
 const buttonsArray = [...buttons]
     .map((button, idx) => {
-        const beat = new Audio(wavesPathsArray[idx]);
-        button.onclick = (beat) => {
+        const soundName = button.getElementsByTagName('span').item(0).innerText;
+        const beat = new Audio('./assets/' + soundName + '.wav');
+        button.onclick = () => {
             loadWaveLogic(beat);
         }
 
