@@ -5,11 +5,11 @@ const loadWaveLogic = (beat) => {
 }
 
 const buttonsArray = [...buttons]
-    .map((button, idx) => {
+    .map(button => {
         const soundName = button.getElementsByTagName('span').item(0).innerText;
         const beat = new Audio('./assets/' + soundName + '.wav');
         button.onclick = () => {
-            loadWaveLogic(beat);
+            loadWaveLogic(beat);    
         }
 
         document.addEventListener('keydown', function(event){

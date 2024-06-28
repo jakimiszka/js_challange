@@ -26,6 +26,8 @@ html, body {
     position: relative;
     top: 25%;
     text-align: center;
+    color: white;
+    padding-bottom: 1rem;
 }
 
 .button:hover {
