@@ -4,7 +4,7 @@ html, body{
 }
 
 #container{
-    display: block;
+    display: relative;
     height: 100%;
     background-color: cornflowerblue;
 }
@@ -21,24 +21,33 @@ html, body{
 }
 
 .hours{
-    width: 2px;
-    height: 200px;
+    width: 5px;
+    height: 110px;
     background-color: white;
     border: 2px solid white;
+    display: inline-block   ;
     margin: auto;
+    position: relative;
+    left: 45%;
+    transform-origin: bottom right;
 }
 
 .minutes{
     width: 2px;
-    height: 150px;
-    background-color: white;
-    border: 2px solid white;
-    margin: auto;
+    height: 170px;
+    display: inline-block;
     position: relative;
-    transform: rotate(45deg);
-    transform-origin: top left;
+    transform: rotate(245deg);
+    transform-origin: bottom right;
+    margin: auto;
 }
 
 .seconds{
-
+    width: 1px;
+    height: 200px;
+    transform: rotate(50deg);
+    display: inline-block;
+    margin: 0 auto;
+    position: relative;
+    transform-origin: bottom right;
 }
