@@ -1,0 +1,1 @@
+each branch reflects small project for HTML/CSS/JS pracrice
