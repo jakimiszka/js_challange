@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body, html{
+    margin: 0;
+    height: 100%;
+}
+
+#container{
+    background-color: yellow;
+    position: relative;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+}
+
+.name{
+    position: relative;
+    top: 100px;
+}
+
+input[type=text] {
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding-left: 40px;
+    width: 100%;
+    height: 30px;
+    padding: 12px 20px;
+
+    border-radius: 30%;
+  }
